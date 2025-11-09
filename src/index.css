@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+
+  /* Logo Colors */
+  --brand-yellow: #f1c40f;
+  --brand-red: #c0392b;
+
+  /* Backgrounds */
+  --bg-dark: #1a1a1a;
+  --bg-gradient: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+
+  /* Text Colors */
+  --text-primary: #e0e0e0;
+  --text-secondary: #a9a9a9;
+  --text-dark: #1a1a1a;
+
+  /* Button Colors */
+  --btn-primary-bg: var(--brand-yellow);
+  --btn-primary-text: var(--text-dark);
+  --btn-primary-hover: #ffd500;
+
+  --btn-secondary-bg: var(--brand-red);
+  --btn-secondary-text: var(--text-primary);
+  --btn-secondary-hover: #d74a3d;
+
+  /* Glass/Liquid Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-blur-amount: 10px;
+
+  /*toggle*/
+  --toggle-bg: rgba(255, 255, 255, 0.1);
+  --toggle-text: rgba(255, 255, 255, 0.7);
+  --toggle-active: rgba(255, 255, 255, 0.2);
+  --toggle-shadow: rgba(255, 255, 255, 0.1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-primary);
+}

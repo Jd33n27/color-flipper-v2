@@ -1,0 +1,24 @@
+.display-container {
+  width: 100%;
+  display: flex;
+  place-items: center;
+}
+
+.color-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 10px 10px var(--bg-dark); */
+  margin: 0 auto;
+  width: 90%;
+  height: 7rem;
+  color: var(--btn-primary-text);
+  background-color: white;
+  border-radius: 15px;
+}
+
+.color-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
