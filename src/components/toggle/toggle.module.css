@@ -22,7 +22,7 @@
   margin: 0 0.3rem; /*TODO n medium screens try to  make this 1rem*/
   border: none;
   text-transform: uppercase;
-  color: var(--toggle-texte);
+  color: var(--toggle-text);
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.5rem 0.5rem; /*TODO on medium screens make this 0.5rem 1rem*/

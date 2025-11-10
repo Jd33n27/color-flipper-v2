@@ -25,8 +25,8 @@
 
   /* Button Colors */
   --btn-primary-bg: var(--brand-yellow);
-  --btn-primary-text: var(--text-dark);
-  --btn-primary-hover: #ffd500;
+  --btn-primary-text: var(--text-primary);
+  --btn-primary-hover: #b09302;
 
   --btn-secondary-bg: var(--brand-red);
   --btn-secondary-text: var(--text-primary);
@@ -50,7 +50,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--bg-gradient);
   background-repeat: no-repeat;
   background-attachment: fixed;

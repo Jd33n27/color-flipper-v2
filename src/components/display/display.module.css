@@ -1,6 +1,7 @@
 .display-container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   place-items: center;
 }
 
@@ -12,8 +13,9 @@
   /* border: 10px 10px var(--bg-dark); */
   margin: 0 auto;
   width: 90%;
+  max-width: 300px;
   height: 7rem;
-  color: var(--btn-primary-text);
+  color: var(--text-dark);
   background-color: white;
   border-radius: 15px;
 }
@@ -21,4 +23,20 @@
 .color-name {
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.btn-group {
+  margin: 3rem 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.colors-container {
+  width: 70%;
+  height: 7rem;
+  display: grid;
+  place-items: center;
+  padding: 0 0.5rem;
 }
