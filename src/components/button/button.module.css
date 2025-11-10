@@ -7,6 +7,6 @@
 .btn {
   text-transform: uppercase;
   background-color: var(--toggle-active);
-  width: 70%;
-  max-width: 200px;
+  width: 100%;
+  max-width: 300px;
 }

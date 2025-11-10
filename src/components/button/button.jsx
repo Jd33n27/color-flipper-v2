@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./button.module.css"
 
-const Button = ({buttonText="flip color", btnClass}) => {
+
+
+const Button = ({buttonText="flip color", btnClass, onClick}) => {
   return <div className={styles["btn-container"]}>
-    <button className={`${styles.btn} ${btnClass}`}>
+    <button onClick={onClick} className={`${styles.btn} ${btnClass}`}>
       {buttonText}
     </button>
   </div>;
