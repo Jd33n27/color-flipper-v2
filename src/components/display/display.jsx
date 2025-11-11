@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./display.module.css";
 import Button from "../button/button";
 import Toggle from "../toggle/toggle";
@@ -7,16 +7,20 @@ import ColorSquares from "../colorSquares/colorSquares";
 const Display = () => {
   const [activeMode, setActiveMode] = useState("simple");
   const [currentColor, setCurrentColor] = useState("#667EEA");
-  const [colors, setColors] = useState([
-    { id: 1, color: "#ff9043" },
-    { id: 2, color: "#ff7079" },
-  ]);
+  const [colors, setColors] = useState([]);
+  // This sets the background color with every color change
+  useEffect(() => {
+    document.body.style.background = currentColor;
+  }, [currentColor]);
 
   const handleFlipColor = () => {
     // Logic to flip color based on activeMode
     const newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    const newId = new Date().getTime();
+    const newColorObject = { id: newId, color: newColor };
     setCurrentColor(newColor);
-    document.body.style.backgroundColor = newColor;
+    // this adds the new color to the colors array for the ColorSquares component
+    setColors((currentColors) => [newColorObject, ...currentColors]);
   };
 
   const handleCopyCode = () => {
@@ -55,7 +59,7 @@ const Display = () => {
       </div>
 
       <div className={styles["colors-container"]}>
-        <ColorSquares id={1} color={"#ff9043"} />
+        <ColorSquares colors={colors} />
       </div>
     </section>
   );
