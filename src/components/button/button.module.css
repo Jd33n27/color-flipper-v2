@@ -8,5 +8,6 @@
   text-transform: uppercase;
   background-color: var(--toggle-active);
   width: 100%;
-  max-width: 300px;
+  padding: 18px 0;
+  border-radius: 10px;
 }

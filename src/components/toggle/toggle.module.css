@@ -5,7 +5,8 @@
   place-items: center;
 }
 
-.mode-toggle {/*TODO add moving border around this to give it liquid glass effect*/
+.mode-toggle {
+  /*TODO add moving border around this to give it liquid glass effect*/
   display: flex;
   margin: 0 auto;
   align-items: center;
@@ -13,13 +14,13 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   background-color: var(--toggle-bg);
-  width: 90%;
-  max-width: 500px;
+  width: 85%;
+  max-width: 400px;
 }
 
 .mode-btn {
   background: transparent;
-  margin: 0 0.3rem; /*TODO n medium screens try to  make this 1rem*/
+  margin: 0 0.1rem; /*TODO n medium screens try to  make this 1rem*/
   border: none;
   text-transform: uppercase;
   color: var(--toggle-text);

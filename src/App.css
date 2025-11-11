@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100dvh;
+  background: var(--bg-gradient);
 }
 
 /* glass effect */
@@ -10,13 +11,15 @@
   background-color: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  padding: 20px;
-  width: 90%;
-  max-width: 1000px;
+  padding: 0 15px;
+  margin-top: 2rem;
+  width: 85%;
+  max-width: 500px;
   backdrop-filter: blur(var(--glass-blur-amount));
   -webkit-backdrop-filter: blur(
     var(--glass-blur-amount)
   ); /*  Safari compatibility */
+  box-shadow: 0 4px 30px var(--glass-shadow);
 }
 
 .text-area {

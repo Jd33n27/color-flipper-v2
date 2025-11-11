@@ -5,11 +5,11 @@ const ColorSquares = ({ colors }) => {
   return (
     <div className={styles["color-squares-container"]}>
       {colors.map((colorObject) => (
-        <div
+        <button
           key={colorObject.id}
           className={`${styles["color-square"]}`}
           style={{ backgroundColor: colorObject.color }}
-        ></div>
+        ></button>
       ))}
     </div>
   );

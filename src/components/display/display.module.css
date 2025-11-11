@@ -12,8 +12,8 @@
   justify-content: center;
   /* border: 10px 10px var(--bg-dark); */
   margin: 0 auto;
-  width: 90%;
-  max-width: 300px;
+  width: 85%;
+  max-width: 500px;
   height: 7rem;
   color: var(--text-dark);
   background-color: white;
@@ -34,9 +34,11 @@
 }
 
 .colors-container {
+  border-top: 1px solid var(--btn-primary-text);
+  padding: 0.4rem 0;
   width: 70%;
-  height: 7rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   place-items: center;
-  padding: 0 0.5rem;
 }

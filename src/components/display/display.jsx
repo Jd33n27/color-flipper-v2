@@ -35,7 +35,7 @@ const Display = () => {
   return (
     <section className={styles["display-container"]}>
       <h1>Color Flipper</h1>
-      <p>Discover beautiful colors with a single click</p>
+      <h5>Discover beautiful colors with a single click</h5>
       {/* Color format toggle */}
       <Toggle activeMode={activeMode} onModeChange={setActiveMode} />
       {/* Color text Display area */}
@@ -59,6 +59,7 @@ const Display = () => {
       </div>
 
       <div className={styles["colors-container"]}>
+        <h4>Recent Colors</h4>
         <ColorSquares colors={colors} />
       </div>
     </section>
