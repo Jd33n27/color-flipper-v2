@@ -73,6 +73,9 @@ const Display = () => {
   const [currentColor, setCurrentColor] = useState("#667EEA");
   const [colors, setColors] = useState([]);
 
+  const MAX_HISTORY_SIZE = 15;
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
   const isFirstRender = useRef(true);
   // This sets the background color with every color change
   useEffect(() => {
@@ -113,8 +116,23 @@ const Display = () => {
     alert("Copied to clipboard!");
   };
 
-  const handleRandomPalette = () => {
-    console.log("Generating new palette...");
+  const handleRandomPalette = async () => {
+    for (let i = 0; i < 3; i++) {
+      const newColor = generateRandomColor();
+      const newId = new Date().getTime() + i;
+      setCurrentColor(newColor);
+
+      setColors((currentColors) => {
+        const combinedColors = [
+          { id: newId, color: newColor },
+          ...currentColors,
+        ];
+        const trimmedColors = combinedColors.slice(0, MAX_HISTORY_SIZE);
+        return trimmedColors;
+      });
+
+      await sleep(300);
+    }
   };
 
   const generateRandomColor = () => {
@@ -161,7 +179,7 @@ const Display = () => {
 
   return (
     <section className={styles["display-container"]}>
-      <Particle />
+      <Particle zIndex={-1} />
       <h1>Color Flipper</h1>
       <h5>Discover beautiful colors with a single click</h5>
       {/* Color format toggle */}
@@ -173,7 +191,7 @@ const Display = () => {
       </div>
       {/* Control buttons */}
       <div className={styles["btn-group"]}>
-        <Button btnClass="btn-secondary" onClick={handleFlipColor} />
+        <Button btnClass="btn-secondary" onClick={handleFlipColor} zIndex={2} />
         <Button
           buttonText="copy code"
           btnClass="btn-primary"

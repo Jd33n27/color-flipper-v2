@@ -5,10 +5,10 @@ import Particle from "./components/particles/particle";
 function App() {
   return (
     <section className="app-container">
-      <div className="glass-card text-area">
+      <div className="glass-card text-area" style={{ zIndex:1 }}>
         <Display />
       </div>
-      <Particle />
+      <Particle zIndex={0} />
     </section>
   );
 }

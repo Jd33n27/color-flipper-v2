@@ -42,3 +42,21 @@
   gap: 0.3rem;
   place-items: center;
 }
+
+@media (min-width: 600px) {
+  .btn-group {
+    flex-direction: row;
+    max-width: 500px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-group > *:nth-child(1),
+  .btn-group > *:nth-child(2) {
+    width: 48%;
+  }
+
+  .btn-group > *:nth-child(3) {
+    width: 50%;
+  }
+}

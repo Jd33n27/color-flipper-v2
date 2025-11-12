@@ -10,4 +10,48 @@
   width: 100%;
   padding: 18px 0;
   border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%; /* Initial position */
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-25deg);
+
+  /* And the animation */
+  animation-name: glare; /* Use the @keyframes we defined */
+  animation-duration: 4s; /* Total loop time (2s glare + 4s pause) */
+  animation-iteration-count: infinite; /* Loop forever */
+
+  /* Use the random delay from JS, with a 5s fallback */
+  animation-delay: var(--glare-delay, 5s);
+}
+
+@keyframes glare {
+  0% {
+    /* Start off-screen */
+    left: -75%;
+  }
+  75% {
+    /* Move across the button */
+    left: 125%;
+  }
+  100% {
+    /* Stay off-screen for the rest of the time (the pause) */
+    left: 125%;
+  }
+}
+
