@@ -1,5 +1,6 @@
 import "./App.css";
 import Display from "./components/display/display";
+import Particle from "./components/particles/particle";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div className="glass-card text-area">
         <Display />
       </div>
+      <Particle />
     </section>
   );
 }
